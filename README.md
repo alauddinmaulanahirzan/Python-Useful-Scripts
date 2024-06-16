@@ -6,5 +6,5 @@ This repository contains useful programs written in **Python 3.9**. Each folder 
 * **Benchmark Program** : using **psutil** to obtain computer performance
 * **Pickle Compress Program** : compress variable dumps using **gzip**, **bzip2**, **lzma**, or **no compression at all**
 * **FastAPI Simple Example** : contains API standard operations (Normal Request, GET Request, HTML Request)
-* **Matrix-based Bencmark** : contains a class to recreate Linpack (Matrix-based) Floating-point Per Second (FLOPS) Benchmark. Based on **numpy** lib
+* **Matrix-based Bencmark** : contains a class to recreate Linpack (Matrix-based) Floating-point Per Second (FLOPS) Benchmark. Based on **numpy** or **scipy** libs
 * *adding more soon*
