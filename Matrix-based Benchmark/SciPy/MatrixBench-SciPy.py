@@ -42,7 +42,7 @@ class MatrixBench():
     def run(self):
         print("# Linpack-like Matrix-based Floating Point Benchmark #")
         print("# Using SciPy as Core (contains Warn: Ill-conditioned Matrix) #")
-        for i in range(0, self.iters + 1):
+        for i in range(1, self.iters + 1):
             print(f"=> Epoch #{str(i).zfill(len(str(self.iters)))}", end="\r")
             self.create_matrices()
             self.do_operation()
