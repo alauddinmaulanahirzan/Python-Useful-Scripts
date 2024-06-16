@@ -32,18 +32,22 @@ class MatrixBench():
     def run(self):
         print("# Linpack-like Matrix-based Floating Point Benchmark #")
         print("# Using NumPy as Core #")
+        print(f"# Matrix Size : {self.size} #")
+        print(f"# Iterations : {self.iters} #")
+        
         for i in range(1, self.iters+1):
             print(f"=> Epoch #{str(i).zfill(len(str(self.iters)))}", end="\r")
             self.create_matrices()
             self.do_operation()
             self.do_calculate()
+        print("\n")
         self.avg_flops: float = (self.average/self.iters) / 1000000
         print(f"Result : {self.avg_flops:.2f} MFLOPS")
 
 
 def main():
     # Adjust Matrix Size
-    size = 192
+    size = 512
     # Adjust Iteration Time
     iters = 10000
     # Run Benchmark
