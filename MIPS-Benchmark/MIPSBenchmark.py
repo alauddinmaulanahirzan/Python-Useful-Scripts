@@ -1,4 +1,3 @@
-import numpy as np
 from time import time
 
 class MIPSBenchmark:
@@ -12,19 +11,20 @@ class MIPSBenchmark:
 
     def ips_operation(self):
         # Run basic 7 ALU operations
-        _ = np.random.randint(10) + np.random.randint(10)
-        _ = np.random.randint(10) - np.random.randint(10)
-        _ = np.random.randint(10) * np.random.randint(10)
-        _ = np.random.randint(10) // (np.random.randint(10) + 1) # Prevent Division by Zero
-        _ = np.random.choice([True, False]) & np.random.choice([True, False])
-        _ = np.random.choice([True, False]) | np.random.choice([True, False])
-        _ = np.random.choice([True, False]) ^ np.random.choice([True, False])
+        _ = 5 + 5
+        _ = 5 - 5
+        _ = 5 * 5
+        _ = 5 // 5
+        _ = True & True
+        _ = True | False
+        _ = False ^ False
 
     def calculate(self):
         self.elapsed_time = self.end_time - self.start_time
         self.total_instructions = self.iters*7
-        self.mips = (self.total_instructions / self.elapsed_time) / 1000000
-        print(f"=> Executed {self.total_instructions} within {self.elapsed_time}\n=> Result : {self.mips:.2f} MIPS")
+        self.mips = (self.total_instructions / self.elapsed_time) 
+        print(f"=> Executed {self.total_instructions} within {self.elapsed_time:.2f}")
+        print(f"=> Result : {self.mips:.2f} IPS / {self.mips/1e6:.2f} MIPS")
 
     def run(self):
         print("# MIPS CPU Benchmark #")
