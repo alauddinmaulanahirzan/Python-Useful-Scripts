@@ -29,12 +29,11 @@ class MIPSBenchmark:
     def run(self):
         print("# MIPS CPU Benchmark #")
         print("# Running 7 Basic ALU Ops #")
-
+        print("# Please Wait #")
+        
         self.start_time = time()
         for i in range(1, self.iters+1):
-            print(f"=> Running Iteration #{str(i)}", end="\r")
             self.ips_operation()
-        print("\n")
         self.end_time = time()
 
         self.calculate()
