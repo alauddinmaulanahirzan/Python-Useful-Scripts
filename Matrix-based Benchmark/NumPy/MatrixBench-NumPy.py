@@ -34,22 +34,22 @@ class MatrixBench():
         print("# Using NumPy as Core #")
         print(f"# Matrix Size : {self.size} #")
         print(f"# Iterations : {self.iters} #")
+        print("# Please Wait #")
         
         for i in range(1, self.iters+1):
-            print(f"=> Epoch #{str(i).zfill(len(str(self.iters)))}", end="\r")
             self.create_matrices()
             self.do_operation()
             self.do_calculate()
-        print("\n")
+        
         self.avg_flops: float = (self.average/self.iters) / 1000000
-        print(f"Result : {self.avg_flops:.2f} MFLOPS")
+        print(f"=> Result : {self.avg_flops:.2f} MFLOPS")
 
 
 def main():
     # Adjust Matrix Size
     size = 512
     # Adjust Iteration Time
-    iters = 10000
+    iters = 1000
     # Run Benchmark
     bench = MatrixBench(iters=iters, size=size)
     bench.run()
